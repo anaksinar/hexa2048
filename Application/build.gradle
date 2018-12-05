@@ -1,0 +1,45 @@
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+    google()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+}
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '28.0.2'
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        applicationId "com.anaksinar.hexa2048"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+}
